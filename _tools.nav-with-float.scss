@@ -1,0 +1,64 @@
+/*
+\/ EXAMPLE HTML CODE \/
+
+    <ul class="float-selector-nav">
+        <li class="float-selector-nav__item active">
+            A link
+        </li>
+        <li class="float-selector-nav__item">
+            another link
+        </li>
+        <li class="float-selector-nav__item">
+            link again
+        </li>
+        <hr>
+    </ul>
+
+\/ EXAMPLE VALUES \/
+
+$item-width: 200px;
+$item-height: 10px;
+$selector-width: 150px;
+$selector-height: 10px;
+$selector-color: black;
+$num-elem: 3;
+$nav-class: "float-selector-nav"
+$nav-item-class: "float-selector-nav__item";
+$nav-item-active-class: "active";
+
+*/
+
+@mixin nav-with-float-selector-rules($item-width, $item-height, $selector-width,
+        $selector-height, $selector-color, $num-elem, $nav-class,
+        $nav-item-class, $nav-item-active-class) {
+    .#{$nav-class} hr {
+        clear: both;
+        float: left;
+        background-color: $selector-color;
+        border: 0 none;
+        height: $selector-height;
+        width: $selector-width;
+        margin: 0 0 0 ($item-width - $selector-width)/2;
+        transition: .5s ease-in-out;
+    }
+    .#{$nav-item-class} {
+        float: left;
+        position: relative;
+        width: $item-width;
+        height: $item-height;
+        text-align: center;
+    }
+    @for $i from 1 through $num-elem {
+        $margin-left: ($item-width - $selector-width)/2 + ($item-width * ($i - 1));
+        .#{$nav-class} .#{$nav-item-class}:nth-child(#{$i}).#{$nav-item-active-class} ~ hr {
+            margin-left: $margin-left;
+        }
+    }
+    @for $i from 1 through $num-elem {
+        //.item-#{$i} { width: 2em * $i; }
+        $margin-left: ($item-width - $selector-width)/2 + ($item-width * ($i - 1));
+        .#{$nav-class} .#{$nav-item-class}:hover:nth-child(#{$i})  ~ hr {
+            margin-left: $margin-left;
+        }
+    }
+}
