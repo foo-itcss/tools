@@ -10,6 +10,10 @@ Once installed, @import into your project in its tools layer:
 ```
 @import "tools/tools";
 ````
+Alternatively you can import only needed files, e.g.:
+```
+@import "tools/position";
+```
 
 #### Pull requests are welcome
 But avoid to "break" the behaviour of current rules, since they're shared with others projects.
