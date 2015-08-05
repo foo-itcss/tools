@@ -12,7 +12,7 @@ Once installed, @import into your project in its tools layer:
 ````
 Alternatively you can import only needed files, e.g.:
 ```
-@import "tools/position";
+@import "tools/tools.position";
 ```
 
 #### Pull requests are welcome
