@@ -1,0 +1,27 @@
+{
+  "name": "foo-itcss-tools",
+  "version": "0.1.0",
+  "homepage": "https://github.com/foo-itcss/tools",
+  "authors": [
+    "Alessandro Miliucci <lifeisfoo@gmail.com>"
+  ],
+  "description": "Reusable tools layer for my (and your) itcss stack",
+  "main": "_tools.scss",
+  "keywords": [
+    "itcss",
+    "sass",
+    "scss",
+    "tools",
+    "layer",
+    "mixin"
+  ],
+  "license": "GPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
