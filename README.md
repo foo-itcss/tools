@@ -1,6 +1,12 @@
 # ITCSS tools layer
 Reusable tools layer for my (and your) itcss stack
 
+### Install using Bower
+
+```
+$ bower install --save foo-itcss-tools
+```
+
 ### Install as a Git Submodule
 
 ```
